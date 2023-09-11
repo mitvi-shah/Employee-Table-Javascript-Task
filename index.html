@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="container">
+    <div class="page-header">
+        <h1>Employee</h1>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            Add Employee
+        </div>
+        <div class="card-body">
+            <form id="addEmployeeForm">
+                
+                <div class="form-control">
+                    <div class="form-title">
+                        <label for="name">Name<span class="req">*</span> :</label>
+                    </div>
+                    <div class="form-input">
+                        <input class="inp" type="text" name="name" minlength="4" maxlength="20" id="name" placeholder="Enter name" required title="enter name">
+                        <div id="name-err-container" class="err-container">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-title">
+                        <label for="gender" >Gender<span class="req">*</span> :</label>
+                    </div>
+                    <div class="form-input ">
+                        <div>
+                        <input  type="radio" name="gender" id="male" class="gender" value="male" checked >Male
+                        <input type="radio" name="gender" id="female" class="gender" value="female" >Female                    
+                    </div>
+                    
+                </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-title">
+                        <label for="dob">Date of Birth<span class="req">*</span> :</label>
+                    </div>
+                    <div class="form-input">
+                        <input class="inp" type="date" name="dob" id="dob" placeholder="mm-dd-yyyy" required >
+                        <div id="dob-err-container" class="err-container"></div>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-title">
+                        <label for="email">Email<span class="req" >*</span> :</label>
+                    </div>
+                    <div class="form-input">
+                        <input class="inp" type="email" name="email" id="email" placeholder="Enter Email" required>
+                        <div id="email-err-container" class="err-container"></div>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-title">
+                        <label for="phone">Phone:</label>
+                    </div>
+                    <div class="form-input">
+                        <input class="inp" type="number" name="phone" id="phone" placeholder="Enter Phone">
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-title hobby-label">
+                        <label id="hby" for="hobby">Hobbies:</label>
+                    </div>
+                    <div class="form-input checkbox-control">
+                        <div class="cbox">
+                            <input type="checkbox" name="hobby" id="cricket" value="cricket">Cricket
+                        </div>
+                        <div class="cbox">
+                            <input type="checkbox" name="hobby" id="chess" value="chess">Chess
+                        </div>
+                        <div class="cbox">
+                        <input type="checkbox" name="hobby" id="music" value="music">Music 
+                        </div>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-title">
+                    </div>
+                    <div class="form-input">
+                        <input type="hidden" id="index" >
+                        <div>
+                       <button onclick=" addEmployee()" id="submit" class="submit">Submit</button>
+                       <button style="margin-left: 30px; display:none" id="cancel" class="submit">Cancel</button>
+                    </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="card" style="margin: 30px 0;">
+        <div class="card-header">
+            Display
+        </div>
+        <div class="card-body" >
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Date of Birth</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Hobbies</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="display">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card" style="margin: 30px 0;">
+        <div class="card-header">
+            Display
+        </div>
+        <div class="card-body" >
+            <table id="advanced">
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</html>
+
+
